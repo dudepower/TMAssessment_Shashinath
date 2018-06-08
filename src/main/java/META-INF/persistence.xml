@@ -1,0 +1,20 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="Assessment">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.assessment.access.Task</class>
+		<class>com.assessment.access.Team</class>
+		<class>com.assessment.access.TeamSkill</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.temp.use_jdbc_metadata_defaults"
+				value="false" />
+			<property name="hibernate.id.new_generator_mappings" value="true" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
